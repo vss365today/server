@@ -78,15 +78,14 @@ This repo contains the required files to deploy _#vss365 today_ on a web server.
 1. Place all secret keys for each component in the `vss365today/secrets` folder.
 The `vss365today/db` folder will be used to persist all database files and data.
 
-1. Add the database username and password to the `vss365today/server/.env` file for use by the database backup process.
+1. Add the database username and password to the `vss365today/server/.env`
+file for use by the database backup process.
 
 1. Run `./build-containers.sh` to create a fresh build of all component
 containers.
 
-1. Run `./update-domain.sh <your-domain.com>` to update the Caddyfile with your domain name.
-
-1. Run `./update-caddy.sh` to place the generated `Caddyfile` file
-in the proper location on the server.
+1. Run `./update-caddy.sh` to place the `Caddyfile` file in the proper
+location on the server.
 
 1. Run `./enable-caddy-logs.sh` to correct a permissions error so Caddy can write log files.
 
