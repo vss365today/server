@@ -107,12 +107,10 @@ TODO Does this need to change?
 
 ### Server configuration update deployment
 
-1. Make all required changes in the `Caddyfile.template` file.
+1. Make all required changes in the `Caddyfile`.
 
-1. Run `./update-domain.sh <your-domain.com>` to update the Caddyfile with your domain name.
-
-1. Run `./update-caddy.sh` to place the generated `Caddyfile` file
-in the proper location on the server.
+1. Run `./update-caddy.sh` to place the `Caddyfile` file in the proper
+location on the server.
 
 1. Run `systemctl reload caddy` to make the changes take effect.
 
