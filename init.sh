@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Go to the root directory
+cd /var/www/vss365today
+
 # Create the required directories
 mkdir backup
 mkdir db
