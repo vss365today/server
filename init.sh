@@ -6,6 +6,6 @@ mkdir secrets
 mkdir static
 
 # Pull the code
-git pull https://github.com/vss365today/web.git
-git pull https://github.com/vss365today/api.git
-git pull https://github.com/vss365today/finder.git
+git clone https://github.com/vss365today/web.git
+git clone https://github.com/vss365today/api.git
+git clone https://github.com/vss365today/finder.git

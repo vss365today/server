@@ -79,7 +79,7 @@ This repo contains the required files to deploy _#vss365 today_ on a web server.
 
 1. Run `mkdir -p /var/www/vss365today && cd /var/www/vss365today`
 
-1. Run `git pull https://github.com/vss365today/server.git && cd server`
+1. Run `git clone https://github.com/vss365today/server.git && cd server`
 
 1. Run `chmod u+x ./init.sh && ./init.sh` to create the requried folders and pull in the latest code using git.
 
