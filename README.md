@@ -74,6 +74,9 @@ This repo contains the required files to deploy _#vss365 today_ on a web server.
          secrets/
          server/
          static/
+            downloads/
+            images/
+               temp/
          web/
    ```
 
