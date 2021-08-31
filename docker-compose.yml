@@ -1,7 +1,7 @@
 version: '3.7'
 
 services:
-  ssweb:
+  web:
     image: vss365today-web:latest
     container_name: vss365today-web
     restart: unless-stopped
