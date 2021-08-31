@@ -62,7 +62,7 @@ This repo contains the required files to deploy _#vss365 today_ on a web server.
    - [Caddy](https://caddyserver.com/), _not_ running as a container or
    inside the _#vss365 today_  container stack.
 
-1. Ensure you are following this structure when downloading all component sources download and creating any required folders:
+1. Ensure you are following this structure when downloading all component setup:
 
    ```
    /var/www/
@@ -76,6 +76,9 @@ This repo contains the required files to deploy _#vss365 today_ on a web server.
          static/
          web/
    ```
+
+
+1. Run `/init.sh` to create the requried folders and pull in the latest code using git.
 
 1. Place all secret keys for each component in the `vss365today/secrets` folder.
 The `vss365today/db` folder will be used to persist all database files and data.
