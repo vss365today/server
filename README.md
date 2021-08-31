@@ -41,7 +41,6 @@ your computer:
 
 - [Python 3.9+](https://www.python.org/)
 - [Poetry](https://python-poetry.org/)
-- [Node.js & npm](https://nodejs.org/en/)
 - [Git](https://git-scm.com/)
 
 It is recommended to install the following software to facilitate development:
