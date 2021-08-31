@@ -16,9 +16,6 @@ services:
     environment:
       - FLASK_ENV=production
       - SYS_VARS_PATH=/app/secrets
-    entrypoint:
-      - sh
-      - ./run-app.sh
     networks:
       - vss365today
 
@@ -37,9 +34,6 @@ services:
     environment:
       - FLASK_ENV=production
       - SYS_VARS_PATH=/app/secrets
-    entrypoint:
-      - sh
-      - ./run-app.sh
     networks:
       - vss365today
 
