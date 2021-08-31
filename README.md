@@ -77,8 +77,11 @@ This repo contains the required files to deploy _#vss365 today_ on a web server.
          web/
    ```
 
+1. Run `mkdir -p /var/www/vss365today && cd /var/www/vss365today`
 
-1. Run `/init.sh` to create the requried folders and pull in the latest code using git.
+1. Run `git pull https://github.com/vss365today/server.git && cd server`
+
+1. Run `./init.sh` to create the requried folders and pull in the latest code using git.
 
 1. Place all secret keys for each component in the `vss365today/secrets` folder.
 The `vss365today/db` folder will be used to persist all database files and data.
