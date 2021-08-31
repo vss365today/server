@@ -2,10 +2,13 @@
 
 > Get the latest #vss365 prompt.
 
-
 ## Background
 
-[_#vss365 today_](https://vss365today.com) is TODO
+[_#vss365 today_](https://vss365today.com) is a web app designed to facilitate
+the delivery of the Twitter-based [#vss365](https://twitter.com/vss365official)
+writing prompt. In addition to providing email-based daily notifications,
+the service also provides a 100% complete archive for every prompt ever used
+since the inception, with multiple ways to search/consume the data.
 
 ## Components
 
