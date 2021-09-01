@@ -50,10 +50,7 @@ services:
       - SYS_VARS_PATH=/app/secrets
       - DOWNLOADS_PATH=/app/downloads
       - SCHEDULE_TIMES=["05 11", "25 11", "45 11", "05 12"]
-    entrypoint:
-      - python
-      - ./finder.py
-      - --schedule
+    command: --schedule
     networks:
       - vss365today
 
