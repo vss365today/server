@@ -59,7 +59,7 @@ services:
     container_name: database
     restart: unless-stopped
     volumes:
-      - ../api/db:/docker-entrypoint-initdb.d
+      - ../api/db:/docker-entrypoint-initdb.d/
       - ../db:/var/lib/mysql
       - ../secrets:/secrets
     ports:
