@@ -69,6 +69,7 @@ services:
       - MARIADB_USER_FILE=/secrets/DB_USERNAME
       - MARIADB_PASSWORD_FILE=/secrets/DB_PASSWORD
       - MARIADB_ROOT_PASSWORD_FILE=/secrets/DB_PASSWORD_ROOT
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     networks:
       - vss365today
 
