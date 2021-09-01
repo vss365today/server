@@ -55,7 +55,7 @@ services:
       - vss365today
 
   db:
-    image: mariadb:10.4
+    image: mariadb:10.6
     container_name: database
     restart: unless-stopped
     volumes:
