@@ -60,15 +60,15 @@ services:
     restart: unless-stopped
     volumes:
       - ../api/db:/docker-entrypoint-initdb.d
-      - ../db/:/var/lib/mysql
+      - ../db:/var/lib/mysql
       - ../secrets:/secrets
     ports:
       - 127.0.0.1:3306:3306
     environment:
-      - MYSQL_DATABASE=vss365today
-      - MYSQL_USER_FILE=/secrets/DB_USERNAME
-      - MYSQL_PASSWORD_FILE=/secrets/DB_PASSWORD
-      - MYSQL_ROOT_PASSWORD_FILE=/secrets/DB_PASSWORD_ROOT
+      - MARIADB_DATABASE=vss365today
+      - MARIADB_USER_FILE=/secrets/DB_USERNAME
+      - MARIADB_PASSWORD_FILE=/secrets/DB_PASSWORD
+      - MARIADB_ROOT_PASSWORD_FILE=/secrets/DB_PASSWORD_ROOT
     networks:
       - vss365today
 
