@@ -50,7 +50,7 @@ services:
       - SYS_VARS_PATH=/app/secrets
       - DOWNLOADS_PATH=/app/downloads
       - SCHEDULE_TIMES=["05 4", "25 4", "45 4", "05 5"]
-    command: --schedule
+    command: prompt --schedule
     networks:
       - vss365today
 
