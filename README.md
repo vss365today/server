@@ -89,9 +89,6 @@ This repo contains the required files to deploy _#vss365 today_ on a web server.
 1. Place all secret keys for each component in the `vss365today/secrets` folder.
 The `vss365today/db` folder will be used to persist all database files and data.
 
-1. Add the database username and password to the `vss365today/server/.env`
-file for use by the database backup process.
-
 1. Run `chmod u+x ./build-containers.sh && ./build-containers.sh` to create a fresh build of all component
 containers.
 
