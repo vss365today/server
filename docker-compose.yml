@@ -74,7 +74,7 @@ services:
       - vss365today
 
   # Run a database backup at midnight every Sunday
-  mysql-backup:
+  backup:
     image: databack/mysql-backup
     container_name: mysql-backup
     restart: unless-stopped
