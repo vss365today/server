@@ -78,6 +78,7 @@ services:
     image: databack/mysql-backup
     container_name: mysql-backup
     restart: unless-stopped
+    user: ${UID}
     volumes:
       - ../backup:/backup
       - ../secrets:/secrets
