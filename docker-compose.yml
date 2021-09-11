@@ -1,4 +1,4 @@
-version: '3.7'
+version: '3.8'
 
 services:
   web:
@@ -78,7 +78,7 @@ services:
     image: databack/mysql-backup
     container_name: mysql-backup
     restart: unless-stopped
-    user: ${UID}
+    user: $DOCKER_USER
     volumes:
       - ../backup:/backup
       - ../secrets:/secrets
