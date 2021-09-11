@@ -84,18 +84,20 @@ This repo contains the required files to deploy _#vss365 today_ on a web server.
 
 1. Run `git clone https://github.com/vss365today/server.git && cd server`
 
-1. Run `chmod u+x ./init.sh && ./init.sh` to create the requried folders and pull in the latest code using git.
+1. Run `chmod u+x ./init.sh && ./init.sh` to set up the required files,
+folders, user account configurations, and latest code from git.
 
 1. Place all secret keys for each component in the `vss365today/secrets` folder.
 The `vss365today/db` folder will be used to persist all database files and data.
 
-1. Run `chmod u+x ./build-containers.sh && ./build-containers.sh` to create a fresh build of all component
-containers.
+1. Run `chmod u+x ./build-containers.sh && ./build-containers.sh` to create a
+fresh build of all component containers.
 
-1. Run `chmod u+x ./update-caddy.sh && ./update-caddy.sh` to place the `Caddyfile` file in the proper
-location on the server.
+1. Run `chmod u+x ./update-caddy.sh && ./update-caddy.sh` to place the
+`Caddyfile` file in the proper location on the server.
 
-1. Run `chmod u+x ./enable-caddy-logs.sh && ./enable-caddy-logs.sh` to correct a permissions error so Caddy can write log files.
+1. Run `chmod u+x ./enable-caddy-logs.sh && ./enable-caddy-logs.sh` to correct
+a permissions error so Caddy can write log files.
 
 1. Start the Caddy server using `systemctl enable caddy && systemctl start caddy`.
 
@@ -108,10 +110,12 @@ location on the server.
 1. Run `./build-containers.sh` to create a fresh build of all
 component containers, or manually rebuild just the containers needed.
 
-1. Run `docker-compose down && docker-compose up -d` to restart the entire stack.
-TODO Does this need to change?
+1. To restart the entire stack, run `docker-compose down && docker-compose up -d`
 
-1. You will want to occasionally run `docker system prune -f` to remove all old container images.
+1. To restart an individual component, run `docker-compose down && docker-compose up -d <component_name>`
+
+1. You will want to occasionally run `docker system prune -f` to remove all
+old container images.
 
 ### Server configuration update deployment
 
