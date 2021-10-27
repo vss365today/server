@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
-# Add ourselves to the docker group
+# Create a new user, "runner", for running containers
+# and add them to the docker group
 # See: https://linoxide.com/use-docker-without-sudo-ubuntu/
-sudo gpasswd -a $USER docker
+useradd -m -g users runner
+sudo gpasswd -a runner docker
 newgrp docker
 
-# Define user/group vars for docker-compose
-# See: https://stackoverflow.com/a/68711840
-echo 'export DOCKER_USER="$(id -u):$(id -g)"' >> ~/.bash_profile
-source ~/.bash_profile
+# Get our "runner" user's UID and GID and provide them to
+# Docker via an unversioned override file
+sed -i "s/UID/$(id -u runner)/g" ./docker-compose.override.yml
+sed -i "s/GID/$(id -g runner)/g" ./docker-compose.override.yml
 
 # Go to the root directory
 cd /var/www/vss365today
