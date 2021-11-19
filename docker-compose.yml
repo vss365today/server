@@ -74,7 +74,7 @@ services:
       - vss365today
 
   # Run a database backup at midnight every Sunday
-  backup:
+  db_backup:
     image: databack/mysql-backup
     container_name: mysql-backup
     restart: unless-stopped
@@ -93,6 +93,23 @@ services:
       - DB_PASS_FILE=/secrets/DB_PASSWORD
     networks:
         - vss365today
+
+  # Run an image backup on a regular interval
+  image_backup:
+    image: vss365today-finder:latest
+    container_name: finder
+    restart: unless-stopped
+    volumes:
+      - ../finder:/app
+      - ../secrets:/app/secrets
+      - ../static/backup:/app/backup
+      - ../static/images:/app/images
+    environment:
+      - FLASK_ENV=production
+      - SYS_VARS_PATH=/app/secrets
+    command: schedule --backup
+    networks:
+      - vss365today
 
 networks:
   vss365today:
