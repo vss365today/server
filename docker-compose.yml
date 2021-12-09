@@ -102,7 +102,7 @@ services:
     volumes:
       - ../finder:/app
       - ../secrets:/app/secrets
-      - ../static/backup:/app/backup
+      - ../static/backup:/backup
       - ../static/images:/app/images
     environment:
       - FLASK_ENV=production
