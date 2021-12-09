@@ -15,7 +15,9 @@ sed -i "s/GID/$(id -g runner)/g" ./docker-compose.override.yml
 cd /var/www/vss365today
 
 # Create the required directories
-mkdir backup db secrets static
+mkdir db secrets static
+mkdir backup/database
+mkdir backup/images
 mkdir static/downloads
 mkdir static/images
 mkdir static/images/temp

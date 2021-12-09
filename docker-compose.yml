@@ -79,7 +79,7 @@ services:
     container_name: mysql-backup
     restart: unless-stopped
     volumes:
-      - ../backup:/backup
+      - ../backup/database:/backup
       - ../secrets:/app/secrets
     environment:
       - DB_DUMP_SAFECHARS=true
@@ -100,9 +100,9 @@ services:
     container_name: image-backup
     restart: unless-stopped
     volumes:
+      - ../backup/images:/backup
       - ../finder:/app
       - ../secrets:/app/secrets
-      - ../static/backup:/backup
       - ../static/images:/app/images
     environment:
       - FLASK_ENV=production
