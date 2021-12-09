@@ -61,14 +61,14 @@ services:
     volumes:
       - ../api/db:/docker-entrypoint-initdb.d
       - ../db:/var/lib/mysql
-      - ../secrets:/secrets
+      - ../secrets:/app/secrets
     ports:
       - 127.0.0.1:3306:3306
     environment:
       - MARIADB_DATABASE=vss365today
-      - MARIADB_USER_FILE=/secrets/DB_USERNAME
-      - MARIADB_PASSWORD_FILE=/secrets/DB_PASSWORD
-      - MARIADB_ROOT_PASSWORD_FILE=/secrets/DB_PASSWORD_ROOT
+      - MARIADB_USER_FILE=/app/secrets/DB_USERNAME
+      - MARIADB_PASSWORD_FILE=/app/secrets/DB_PASSWORD
+      - MARIADB_ROOT_PASSWORD_FILE=/app/secrets/DB_PASSWORD_ROOT
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     networks:
       - vss365today
@@ -80,7 +80,7 @@ services:
     restart: unless-stopped
     volumes:
       - ../backup:/backup
-      - ../secrets:/secrets
+      - ../secrets:/app/secrets
     environment:
       - DB_DUMP_SAFECHARS=true
       - DB_DUMP_CRON=0 0 * * 0
@@ -89,8 +89,8 @@ services:
       - DB_NAMES=vss365today
       - DB_DUMP_TARGET=/backup
       - NICE=true
-      - DB_USER_FILE=/secrets/DB_USERNAME
-      - DB_PASS_FILE=/secrets/DB_PASSWORD
+      - DB_USER_FILE=/app/secrets/DB_USERNAME
+      - DB_PASS_FILE=/app/secrets/DB_PASSWORD
     networks:
         - vss365today
 
