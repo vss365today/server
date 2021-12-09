@@ -97,7 +97,7 @@ services:
   # Run an image backup on a regular interval
   image_backup:
     image: vss365today-finder:latest
-    container_name: finder
+    container_name: image-backup
     restart: unless-stopped
     volumes:
       - ../finder:/app
