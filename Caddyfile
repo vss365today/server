@@ -47,3 +47,9 @@ static.vss365today.com {
 		hide /images/temp
 	}
 }
+
+# -- Webhook
+webhook.vss365today.com {
+	header -server
+	reverse_proxy 127.0.0.1:6000
+}
