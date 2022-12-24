@@ -63,7 +63,7 @@ services:
       - api
 
   database:
-    image: mariadb:10.8
+    image: mariadb:10.9
     container_name: database
     restart: unless-stopped
     volumes:
