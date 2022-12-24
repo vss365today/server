@@ -22,8 +22,9 @@ mkdir static/downloads
 mkdir static/images
 mkdir static/images/temp
 
-# Allow the "runner" user to write to the directory
+# Allow the "runner" user to write to the db backup directory
 chown -R runner ./backup
+chown -R runner ./backup/database
 
 # Pull the code
 git clone https://github.com/vss365today/web.git
