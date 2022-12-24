@@ -8,7 +8,7 @@
 the delivery of the Twitter-based [#vss365](https://twitter.com/vss365official)
 writing prompt. In addition to providing email-based daily notifications,
 the service also provides a 100% complete archive for every prompt ever used
-since the inception, with multiple ways to search/consume the data.
+since the inception, with multiple ways to search and consume the data.
 
 ## Components
 
@@ -17,7 +17,7 @@ development, duties, and deployment. The following is a brief listing of each
 component and their duty.
 
 - **[Web app](https://github.com/le717/vss365today-web)**: A
-[Flask-powered](https://flask.palletsprojects.com/en/1.1.x/) web interface for viewing
+[Flask-powered](https://flask.palletsprojects.com/en/2.2.x/) web interface for viewing
 and downloading prompts.
 
 - **[REST API](https://github.com/le717/vss365today-api)**: A Flask-based REST API that handles
@@ -39,7 +39,7 @@ Backups are located in the `/backup` directory (see below for details).
 You will need to install the following software to run the entire platform on
 your computer:
 
-- [Python 3.9+](https://www.python.org/)
+- [Python 3.10+](https://www.python.org/)
 - [Poetry](https://python-poetry.org/)
 - [Git](https://git-scm.com/)
 
@@ -125,6 +125,6 @@ location on the server.
 
 ## Creation
 
-2019-2021 Caleb Ely
+2019-2022 Caleb Ely
 
 [MIT](LICENSE)

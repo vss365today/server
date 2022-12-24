@@ -83,27 +83,27 @@ services:
       - vss365today
 
   # Run a database backup at midnight every Sunday
-  # db_backup:
-  #   image: databack/mysql-backup
-  #   container_name: mysql-backup
-  #   restart: unless-stopped
-  #   volumes:
-  #     - ../backup/database:/backup
-  #     - ../secrets:/app/secrets
-  #   environment:
-  #     - DB_DUMP_SAFECHARS=true
-  #     - DB_DUMP_CRON=0 0 * * 0
-  #     - DB_SERVER=database
-  #     - DB_PORT=3306
-  #     - DB_NAMES=vss365today
-  #     - DB_DUMP_TARGET=/backup
-  #     - NICE=true
-  #     - DB_USER_FILE=/app/secrets/DB_USERNAME
-  #     - DB_PASS_FILE=/app/secrets/DB_PASSWORD
-  #   networks:
-  #     - vss365today
-  #   depends_on:
-  #     - database
+  db_backup:
+    image: databack/mysql-backup
+    container_name: mysql-backup
+    restart: unless-stopped
+    volumes:
+      - ../backup/database:/backup
+      - ../secrets:/app/secrets
+    environment:
+      - DB_DUMP_SAFECHARS=true
+      - DB_DUMP_CRON=0 0 * * 0
+      - DB_SERVER=database
+      - DB_PORT=3306
+      - DB_NAMES=vss365today
+      - DB_DUMP_TARGET=/backup
+      - NICE=true
+      - DB_USER_FILE=/app/secrets/DB_USERNAME
+      - DB_PASS_FILE=/app/secrets/DB_PASSWORD
+    networks:
+      - vss365today
+    depends_on:
+      - database
 
   # Run an image backup on a regular interval
   image_backup:
