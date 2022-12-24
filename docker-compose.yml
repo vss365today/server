@@ -18,6 +18,9 @@ services:
       - SYS_VARS_PATH=/app/secrets
     networks:
       - vss365today
+    depends_on:
+      - database
+      - api
 
   api:
     image: vss365today-api:latest
@@ -36,6 +39,8 @@ services:
       - SYS_VARS_PATH=/app/secrets
     networks:
       - vss365today
+    depends_on:
+      - database
 
   finder:
     image: vss365today-finder:latest
@@ -53,6 +58,9 @@ services:
     command: schedule --prompt
     networks:
       - vss365today
+    depends_on:
+      - database
+      - api
 
   database:
     image: mariadb:10.7
@@ -93,7 +101,9 @@ services:
       - DB_USER_FILE=/app/secrets/DB_USERNAME
       - DB_PASS_FILE=/app/secrets/DB_PASSWORD
     networks:
-        - vss365today
+      - vss365today
+    depends_on:
+      - database
 
   # Run an image backup on a regular interval
   image_backup:
