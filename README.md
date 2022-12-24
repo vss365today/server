@@ -96,10 +96,7 @@ fresh build of all component containers.
 1. Run `chmod u+x ./update-caddy.sh && ./update-caddy.sh` to place the
 `Caddyfile` file in the proper location on the server.
 
-1. Run `chmod u+x ./enable-caddy-logs.sh && ./enable-caddy-logs.sh` to correct
-a permissions error so Caddy can write log files.
-
-1. Start the Caddy server using `systemctl enable caddy && systemctl start caddy`.
+1. Start the Caddy server using `systemctl enable caddy.service && systemctl start caddy.service`.
 
 1. Run `docker-compose up -d` to start the entire stack.
 
