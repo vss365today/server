@@ -16,7 +16,7 @@ services:
     environment:
       - FLASK_ENV=production
       - FLASK_SKIP_DOTENV=1
-      - SYS_VARS_PATH=/app/
+      - SYS_VARS_PATH=/app/secrets
     networks:
       - vss365today
     depends_on:
