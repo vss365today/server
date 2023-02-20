@@ -15,6 +15,7 @@ services:
       - 127.0.0.1:5002:80
     environment:
       - FLASK_ENV=production
+      - FLASK_DEBUG=0
       - FLASK_SKIP_DOTENV=1
       - SYS_VARS_PATH=/app/
     networks:
@@ -37,6 +38,7 @@ services:
       - 127.0.0.1:5003:80
     environment:
       - FLASK_ENV=production
+      - FLASK_DEBUG=0
       - FLASK_SKIP_DOTENV=1
       - SYS_VARS_PATH=/app/secrets
     networks:
