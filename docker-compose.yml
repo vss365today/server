@@ -57,7 +57,7 @@ services:
     environment:
       - FLASK_ENV=production
       - SYS_VARS_PATH=/app/secrets
-      - DOWNLOADS_PATH=/app/dowloads
+      - DOWNLOADS_PATH=/app/downloads
       - SCHEDULE_TIMES=["05 4", "25 4", "45 4", "05 5", "25 5", "45 5", "05 6", "25 6", "45 6", "05 7"]
     command: schedule --prompt
     networks:
