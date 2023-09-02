@@ -58,7 +58,7 @@ services:
       - FLASK_ENV=production
       - SYS_VARS_PATH=/app/secrets
       - DOWNLOADS_PATH=/app/downloads
-      - SCHEDULE_TIMES=["05 4", "25 4", "45 4", "05 5", "25 5", "45 5", "05 6", "25 6", "45 6", "05 7"]
+      - SCHEDULE_TIMES=["05 3", "05 4", "05 5", "05 6", "05 7", "05 8", "05 9", "05 10", "05 11", "05 12"]
     command: schedule --prompt
     networks:
       - vss365today
